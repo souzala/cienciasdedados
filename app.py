@@ -7,16 +7,14 @@ import geopandas as gpd
 # 🌟 Configuração da página
 # -----------------------------
 st.set_page_config(page_title="📊 Censo Escolar 2022", layout="wide")
-st.markdown("## 🎓 Dashboard Interativo - Censo Escolar 2022")
+st.markdown("## 🎓 Dashboard - Censo Escolar 2022")
 st.markdown("Visualize e explore as principais características das escolas brasileiras com base nos microdados do INEP.")
 
 # -----------------------------
 # 📁 Carregando os dados
 # -----------------------------
-df = pd.read_csv(
-    r'C:\Users\laris\OneDrive\Documentos\censo\microdados_ed_basica_2022.csv',
-    sep=';', encoding='latin1'
-)
+url = https://drive.google.com/file/d/18sfTL_N1xRqunmsO77aAt1wfI0qbz3I5/view?usp=sharing
+df = pd.read_csv(url, sep=';', encoding='latin1')
 
 # Mapeando variáveis
 df['Dependência'] = df['TP_DEPENDENCIA'].map({1: 'Federal', 2: 'Estadual', 3: 'Municipal', 4: 'Privada'})
