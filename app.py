@@ -13,8 +13,20 @@ st.markdown("Visualize e explore as principais características das escolas bras
 # -----------------------------
 # 📁 Carregando os dados
 # -----------------------------
-url = "https://drive.google.com/uc?export=download&id=18sfTL_N1xRqunmsO77aAt1wfI0qbz3I5"
-df = pd.read_csv(url, sep=';', encoding='latin1')
+import pandas as pd
+import gdown  # precisa estar no requirements.txt
+
+# ID do arquivo
+file_id = "18sfTL_N1xRqunmsO77aAt1wfI0qbz3I5"
+url = f"https://drive.google.com/uc?id={file_id}"
+
+# Baixar com gdown (só baixa uma vez, se o arquivo ainda não existir)
+output = "microdados.csv"
+gdown.download(url, output, quiet=False)
+
+# Carregar
+df = pd.read_csv(output, sep=';', encoding='latin1')
+
 
 # Mapeando variáveis
 df['Dependência'] = df['TP_DEPENDENCIA'].map({1: 'Federal', 2: 'Estadual', 3: 'Municipal', 4: 'Privada'})
