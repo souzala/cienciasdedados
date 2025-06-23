@@ -13,7 +13,7 @@ st.markdown("Visualize e explore as principais características das escolas bras
 # -----------------------------
 # 📁 Carregando os dados
 # -----------------------------
-url = "https://drive.google.com/file/d/18sfTL_N1xRqunmsO77aAt1wfI0qbz3I5/view?usp=sharing"
+url = "https://drive.google.com/uc?export=download&id=18sfTL_N1xRqunmsO77aAt1wfI0qbz3I5"
 df = pd.read_csv(url, sep=';', encoding='latin1')
 
 # Mapeando variáveis
