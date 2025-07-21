@@ -8,5 +8,17 @@ geopandas
 folium
 streamlit-folium
 gdown
-
+scikit-learn
+streamlit_folium 
+folium_static
+fsklearn.model_selection 
+train_test_split
+fsklearn.metrics
+confusion_matrix
+sklearn.preprocessing
+StandardScaler
+sklearn.neighbors
+KNeighborsClassifier
+sklearn.ensemble
+RandomForestClassifier
 
